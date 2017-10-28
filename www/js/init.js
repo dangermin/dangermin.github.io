@@ -4,10 +4,11 @@
   $('.button-collapse').sideNav();
   $('.scrollspy').scrollSpy();
   $('.parallax').parallax();
-  // $('.carousel').carousel();
-  // setInterval(function() {
-  //   $('.carousel').carousel('next');
-  // }, 4000); // every 4 seconds
+  $('.slider').slider();
+  $('.carousel').carousel();
+  setInterval(function() {
+    $('.carousel').carousel('next');
+  }, 4000); // every 4 seconds
 
   $('.carousel.carousel-slider').carousel({fullWidth: true, padding:200},setTimeout(autoplay, 4500));
     function autoplay() {
@@ -15,11 +16,19 @@
       setTimeout(autoplay, 4500);
     };
 
-    $("button").click(function () {
-      $("#content").hide();
-      $("#yt")[0].src += "?autoplay=1";
-      setTimeout(function(){ $("#yt").show(); }, 200);
-      });
+//   $('.carousel').carousel({
+//     dist:0,
+//     shift:0,
+//     padding:20,
+// });
+
+  $("button").click(function () {
+    $("#content").hide();
+    $("#yt")[0].src += "?autoplay=1";
+    setTimeout(function(){ $("#yt").show(); }, 200);
+    });
+
+  $('.modal-trigger').leanModal();
 
 
     /*** Animate word ***/

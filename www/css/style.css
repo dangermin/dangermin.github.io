@@ -10,7 +10,7 @@
 min-height: 380px;
 line-height: 0;
 height: auto;
-color: rgba(255,255,255,.9);
+color: rgba(0,0,0,.5);
 }
 .parallax-container .section {
   width: 100%;
@@ -25,13 +25,13 @@ color: rgba(255,255,255,.9);
   background-color: black;
 }
 #yt {
-  display: none; */
-}
+  display: none;
+} */
 
 /* defualt */
-.default_color{background-color: #2196F3 !important}
+.default_color{background-color: #042ae5 !important}
 
-.default_color_text{color: #2196F3 !important}
+.default_color_text{color: #042ae5 !important}
 
 .icon-block {
     padding: 0 15px;
@@ -39,17 +39,41 @@ color: rgba(255,255,255,.9);
 
 #intro, #work, #team {padding-top: 4rem;}
 
+.sblBlue{
+  font-size: 1.5em;
+  font-weight: 200;
+  color: rgb(4, 42, 229) !important;
+}
+
 
 #index-banner {
     min-height: 200px;
     max-height: 500px;
     position: relative;
-    background-color: #2196F3;
+    background-color: #042ae5;
 }
 
 #nav_f{
     box-shadow: none !important;
     -webkit-box-shadow:none !important;
+    background-color: black;
+}
+
+hr {
+  /* display: block; */
+  border-top: 3px solid rgb(4, 42, 229);
+}
+
+.blackBackground{
+  background-color: black !important;
+}
+
+.modal {
+  max-height: 90%;
+}
+
+.modal-form-row {
+  margin-bottom: 0px;
 }
 
 .text_h {
@@ -58,6 +82,29 @@ color: rgba(255,255,255,.9);
     font-weight: 100;
     color:white;
 }
+
+#comingInRight{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 2000;
+  font-size:3em;
+  padding-right: 50%;
+  color: white;
+  text-transform: uppercase;
+  /* text-align: center; */
+  margin: 0;
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  transform: translate(-90%, -90%);
+  /* position: absolute; */
+  white-space: nowrap;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+
+  text-shadow: rgb(4, 42, 229) 3px 0px 0px, rgb(4, 42, 229) 2.83487px 0.981584px 0px, rgb(4, 42, 229) 2.35766px 1.85511px 0px, rgb(4, 42, 229) 1.62091px 2.52441px 0px, rgb(4, 42, 229) 0.705713px 2.91581px 0px, rgb(4, 42, 229) -0.287171px 2.98622px 0px, rgb(4, 42, 229) -1.24844px 2.72789px 0px, rgb(4, 42, 229) -2.07227px 2.16926px 0px, rgb(4, 42, 229) -2.66798px 1.37182px 0px, rgb(4, 42, 229) -2.96998px 0.42336px 0px, rgb(4, 42, 229) -2.94502px -0.571704px 0px, rgb(4, 42, 229) -2.59586px -1.50383px 0px, rgb(4, 42, 229) -1.96093px -2.27041px 0px, rgb(4, 42, 229) -1.11013px -2.78704px 0px, rgb(4, 42, 229) -0.137119px -2.99686px 0px, rgb(4, 42, 229) 0.850987px -2.87677px 0px, rgb(4, 42, 229) 1.74541px -2.43999px 0px, rgb(4, 42, 229) 2.44769px -1.73459px 0px, rgb(4, 42, 229) 2.88051px -0.838247px 0px;
+}
+
 
 .brand-logo{
     position: absolute;
@@ -70,24 +117,30 @@ color: rgba(255,255,255,.9);
     letter-spacing: 7px;
 }
 
-.text_h2 {font-weight: 100;margin-bottom: 4%; line-height: 4.5rem;}
+.text_h2 {font-weight: 100; margin-bottom: 4%; line-height: 4.5rem; color: white;}
 
-.span_h2 {font-weight: 300;color: #2196F3;}
+.span_h2 {font-weight: 300;color: #042ae5;}
 
-.text_b{color: #2196F3;}
+.text_b{color: #042ae5;}
 
 .in{font-weight: 400 !important; font-style: normal !important;}
 
 .promo i {
-    color: #2196F3;
+    color: #042ae5;
     font-size: 7rem;
     display: block;
 }
-.card-content a {color: #2196F3;}
 
-.card-content a:hover {color: #2196F3;}
+.promo-caption {font-weight: 300; color: #042ae5;}
+.light {color: white;
+        text-align: left; !mportant
+}
 
-#work, #team{background: rgb(247, 247, 247);}
+.card-content a {color: #042ae5; }
+
+.card-content a:hover {color: #042ae5;}
+
+#work, #team{background: rgb(0, 0, 0, .7);}
 
 .text_pink{color:#EF9A9A;}
 
@@ -119,7 +172,7 @@ nav ul a {
     transform: translateY(-50%);
     height: 90%;
     width: 1px;
-    background-color: #aebcb9;
+    /* background-color: #aebcb9; */
 }
 
 .cd-headline.type .cd-words-wrapper.waiting::after {
@@ -128,7 +181,7 @@ nav ul a {
     animation: cd-pulse 1s infinite;
 }
 .cd-headline.type .cd-words-wrapper.selected {
-    background-color: #FFF;
+    /* background-color: #FFF; */
 }
 
 .cd-headline.type .cd-words-wrapper.selected::after {
@@ -136,7 +189,8 @@ nav ul a {
 }
 
 .cd-headline.type .cd-words-wrapper.selected b {
-    color: #2196F3;
+    /* color: #042ae5; */
+    color: #FFF;
 }
 
 .cd-headline.type b {
