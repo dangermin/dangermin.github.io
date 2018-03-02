@@ -12,13 +12,22 @@
   <link href="min/custom-min.css" type="text/css" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <scrit src="mejs/jquery.js"></scrit>
+  <script src="mejs/mediaelement-and-player.min.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
   integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
   crossorigin="anonymous"></link>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="http://vjs.zencdn.net/6.6.3/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 </head>
 
-<body id="top" class="scrollspy">
+<!-- <body id="top" class="scrollspy"> -->
+  <body id="featers" class="scrollspy">
 
   <!-- Pre Loader -->
   <div id="loader-wrapper">
@@ -38,32 +47,42 @@
             <img src="img/sbl complete_logo.png" alt="logo img" style="max-width: 200px; max-height: 200px;">
           </a>
           <ul class="right hide-on-med-and-down">
-            <li>
-              <a href="#features">Features</a>
+            <!-- <li><a href="#features">Features</a></li> -->
+            <li class="parent"><a>Products</a>
+              <ul class="child">
+                <li class="switch active" id="li1" data-image="#img1">
+                  <a href="#features" style="color: #0012ff; font-weight: bold">Mini</a>
+                </li>
+                <li  class="switch" id="li1" data-image="#img2">
+                  <a href="#features" style="color: #0012ff; font-weight: bold">GPS</a>
+                </li>
+                <li  class="switch" id="li1" data-image="#img3">
+                    <a href="#features" style="color: #0012ff; font-weight: bold">AK15</a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a href="#design">Design</a>
-            </li>
-            <li>
-              <a href="#signUp">Sign Up</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+            <li><a href="#signUp">Sign Up</a></li>
+            <li><a href="#downLoad">Download</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
           </ul>
           <ul id="nav-mobile" class="side-nav">
-            <li>
-              <a href="#features">Features</a>
+            <!-- <li><a href="#features">Features</a></li> -->
+            <li class="parent"><a>Products</a>
+              <ul class="child">
+                <li class="switch active" id="li1" data-image="#img1">
+                  <a href="#img">mini</a>
+                </li>
+                <li  class="switch" id="li1" data-image="#img2">
+                  <a href="#img">GPS</a>
+                </li>
+                <li  class="switch" id="li1" data-image="#img3">
+                    <a href="#img">AK15</a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a href="#design">Design</a>
-            </li>
-            <li>
-              <a href="#signUp">Sign Up</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+            <li><a href="#signUp">Sign Up</a></li>
+            <li><a href="#downLoad">Download</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
           </ul>
           <a href="#" data-activates="nav-mobile" class="button-collapse">
             <i class="mdi-navigation-menu"></i>
@@ -72,49 +91,57 @@
       </div>
     </nav>
   </div>
-
-  <!--Hero-->
-  <!-- <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-        <h1 class="text_h center header cd-headline letters type">
-            <span>Secure Box</span>
-            <span class="cd-words-wrapper waiting">
-                <b class="is-visible">Live</b>
-                <b>Live</b>
-            </span>
-        </h1>
-    </div>
-</div> -->
   <!-- Carusel -->
-  <div id="index-banner" class="parallax-container">
-      <div col='col-sm-2 col-lg-7' >
-        <h1 class='animated fadeInLeft' id='comingInRight' >Coming Soon
+  <div class="topContainer">
+      <div class="w3-content w3-display-container">
+          <div class="w3-display-container mySlides">
+            <img src="img/MiniCrop.jpg" style="max-width: 100%; max-height: 100%;">
+            <!-- Add a caption text for each image slide with the w3-display-* classes (topleft, topmiddle, topright, bottomleft, bottommiddle, bottomright or middle) -->
+            <!-- <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+              TextArea
+            </div> -->
+          </div>
+
+          <div class="w3-display-container mySlides">
+            <img src="img/GPS_Crop.jpg" style="max-width: 100%; max-height: 100%;">
+          </div>
+
+          <div class="w3-display-container mySlides">
+            <img src="img/AK15Crop.jpg" style="max-width: 100%; max-height: 100%;">
+          </div>
+     </div>
+        <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+  <!--Video Wrapper -->
+   <div class="midContainer">
+      <div class="wrapper">
+        <h2 style="color: white; text-align: center">How it works</h2>
+        <video class='center' max-width="852" max-height="480" controls>
+          <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4">
+          <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+          <track label="English" kind="subtitles" srclang="en" src="bridge-captions.vtt" default>
+        </video>
       </div>
-    <div class="carousel carousel-slider center" data-indicators="true">
-      <div class="carousel-item" href="#one!">
-          <img src="img/Map.jpg" alt="map of world coverage img" style="max-width: 100%; max-height: 100%;">
-        </div>
-        <!-- <div class="carousel-item" href="#two!">
-          <img src="img/logo2-02-01.jpg" alt="logo on truck img" style="max-width: 100%; max-height: 100%;">
-        </div> -->
-    </div>
+  </div>
+  <div style="height:10em">
   </div>
   <!--features and service-->
-  <div id="features" class="section scrollspy blackBackground">
+  <div class="section scrollspy whiteBackground">
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <h2 class="center header text_h2">The future of is here.
-            <span class="span_h2"> SecureBoxLive </span>brings technology right to your hip.
-            <span class="span_h2"> Knowledge is power.</span>
+          <h2 class="center header text_h2">.
+            <span class="span_h2">  </span>
+            <span class="span_h2"> </span>
           </h2>
         </div>
-
         <div class="col s12 m4 l4">
           <div class="center promo promo-example">
             <i class="mdi-action-explore"></i>
             <h5 class="promo-caption">Location</h5>
-            <p class="light center">Knowing where your peace is, is peace of mind. With SOS services you can recieve the exact Google Map location
+            <p class="dark center">Knowing where your peace is, is peace of mind. With SOS services you can recieve the exact Google Map location
               right to your phone.</p>
           </div>
         </div>
@@ -122,210 +149,146 @@
           <div class="center promo promo-example">
             <i class="mdi-action-settings-remote"></i>
             <h5 class="promo-caption">Instant alerts</h5>
-            <p class="light center">Ability to get notifications if the holster is moved with in-app notifactions straight to your phone.</p>
+            <p class="dark center">Ability to get notifications if the holster is moved with in-app notifactions straight to your phone.</p>
           </div>
         </div>
         <div class="col s12 m4 l4">
           <div class="center promo promo-example">
             <i class="mdi-hardware-security"></i>
             <h5 class="promo-caption">Secure technology</h5>
-            <p class="light center">Simple to setup and use, this device is the perfect marriage between protection and elegance.</p>
+            <p class="dark center">Simple to setup and use, this device is the perfect marriage between protection and elegance.</p>
           </div>
         </div>
       </div>
-      <p class="light center">Secureboxlive™ is a new development in firearm security that provides firearm owners a
-        new level of peace of mind.  The device provides its user with security alerts when their firearm is moved,
-        accessed, tampered with or stolen – in real time, within seconds.
-      <p class="light center">The alerts provided by Secureboxlive™ to its user’s email, computer, phone or other
-        mobile device acts as a deterrent to children who might access firearms. Just knowing the alerts will occur
-        prevents curious children from attempting to unlock a case and access a firearm. The alerts also provide
-        quick notification if a firearm is tampered with or stolen. Over 100,000 firearms are carried by children
-        to school each year. A Secureboxlive™ owner can answer the question “Its 10:00 AM, where is my firearm?”
-        Bottom line - Secureboxlive™ can save lives.
-
     </div>
   </div>
-
+  <br/>
   <!--design-->
-  <div class="section scrollspy blackBackground" id="design">
+  <div class="section scrollspy whiteBackground">
     <div class="container">
-      <h2 class="header text_b">design </h2>
-      <h2 class="header text_w">The World’s First Lockable Minimalist Holster</h2>
-      <p class="light center">SBL GHM1 was envisioned with cutting edge holster firearm storage/carry practices compiled with quick access your firearm when needed. We provide smart alert locking holsters without the worry of lockout due to technical failure.
-      <h2 class="header text_w">Protects Against Unauthorized Use And Tampering</h2>
-      <p class="light center">•	Easy to operate key lock system that comes with two keys.
-      <p class="light center">•	Includes a security cable that can withstand up to 1,500 lbs of cut force.
-      <p class="light center">•	Keep your handgun holstered on you safely, securely and ready for action.
-        <div class="slider">
-        <ul class="slides">
-          <li>
-            <img src="img/miniBlack.jpg" alt="mini front side" style="max-width: 100%; max-height: 100%;">
-            <!-- <div class="caption center-align">
-              <h3>Built Tough!</h3>
-              <h5 class="light grey-text text-lighten-3">For your protection.</h5>
-            </div> -->
-          </li>
-          <li>
-            <img src="img/back_mini.jpg" alt="duty right angle" style="max-width: 100%; max-height: 100%;">
-            <!-- <div class="caption left-align">
-              <h3>Left Aligned Caption</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div> -->
-          </li>
-          <li>
-            <img src="img/backside_mini.jpg" alt="duty flat angle" style="max-width: 100%; max-height: 100%;">
-            <!-- <div class="caption right-align">
-              <h3>Right Aligned Caption</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div> -->
-          </li>
-          <li>
-            <img src="img/mini_self.jpg" alt="duty rear angle" style="max-width: 100%; max-height: 100%;">
-            <!-- <div class="caption center-align">
-              <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div> -->
-          </li>
-          <li>
-            <img src="img/mini_solo.jpg" alt="duty rear" style="max-width: 100%; max-height: 100%;">
-            <!-- <div class="caption center-align">
-              <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div> -->
-          </li>
-        </ul>
-      </div>
-
-        <!-- SECUREBOXLIVE™ runs off a long-life lithium battery.  The elasticity of the internal lithium battery is estimated 2 weeks on a full charge, so if power is lost in your home or external power source, you will still get the alerts and you will also be automatically notified when the batteries are low. -->
-        <h2 class="header text_w">The World’s First Gun Safe</h2>
-        <p class="light center">SBL GHV1 was envisioned with cutting edge holster firearm storage/carry practices compiled with quick access your firearm when needed. We provide smart alert locking holsters without the worry of lockout due to technical failure.
-        <h2 class="header text_w">Tank-Like Strength Protection With Concealed Carry Comfort</h2>
-        <p class="light center">GHV1 holsters provide superior protection and keeps your handgun ready for quick access. It’s secure from theft, damage and/or accidental discharge.
-        <p class="light center">GHV1 has a unibody tamper-resistant holster and trigger cover hood made of solid airplane aluminum construction, providing strength and security against unauthorized access of your firearm.
-        <p class="light center">GHV1 uses a single clip which can be adjusted vertically or canted for concealed carrying comfort.
-
-      <div class="slider">
-        <ul class="slides">
-          <li>
-            <img src="img/dutyRightFrontBlk.jpg" alt="duty right front" style="max-width: 100%; max-height: 100%;">
-            <div class="caption center-align">
-              <h3>Built Tough!</h3>
-              <h5 class="light grey-text text-lighten-3">For your protection.</h5>
-            </div>
-          </li>
-          <li>
-            <img src="img/dutyRightAngleBlk.jpg" alt="duty right angle" style="max-width: 100%; max-height: 100%;">
-            <div class="caption left-align">
-              <!-- <h3>Left Aligned Caption</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
-            </div>
-          </li>
-          <li>
-            <img src="img/dutyFlatAngleBlk.jpg" alt="duty flat angle" style="max-width: 100%; max-height: 100%;">
-            <div class="caption right-align">
-              <!-- <h3>Right Aligned Caption</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
-            </div>
-          </li>
-          <li>
-            <img src="img/dutyRearAngleBlk.jpg" alt="duty rear angle" style="max-width: 100%; max-height: 100%;">
-            <div class="caption center-align">
-              <!-- <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
-            </div>
-          </li>
-          <li>
-            <img src="img/dutyRearBlk.jpg" alt="duty rear" style="max-width: 100%; max-height: 100%;">
-            <div class="caption center-align">
-              <!-- <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
-            </div>
-          </li>
-        </ul>
-      </div>
-      <!-- <p class="light center">SECUREBOXLIVE™ runs off a long-life lithium battery.  The elasticity of the internal lithium battery is estimated 2 weeks on a full charge, so if power is lost in your home or external power source, you will still get the alerts and you will also be automatically notified when the batteries are low. -->
-
+      <h2 class="header center">Features </h2>
     </div>
-    <div class="container">
-        <div class="row">
-          <div class="col s12 m4 l4">
-            <img src="img/iPhone-X.png" alt="app img" style="max-width: 90%; max-height: 90%;">
-          </div>
-          <!-- <br/> -->
-          <div class="col s12 m8 l8">
-            <p class="light center">SBL GHV1 uses Cellular and Wi-Fi  connectivity that will alert your smart phone, smart watch, tablet and/or a PC when your holster has been tampered with.  Our cutting edge holsters gives you  unprecedented protection in 144 countries (& counting) around the world.
-          </div>
-          <!-- <br/> -->
-          <div class="col s12 m8 l8">
-            <p class="light center">The bottom line, we help you “Protect the Ones You Love” and “Protect the Things You Love” and provide peace of mind, protection and security at home or on the go.
-          </div>
-          <!-- <br/> -->
-          <div class="col s12 m8 l8">
-            <p class="light center">Our focus is on increasing safety and security by eliminating variables. We believe that our superior technology makes interaction with holsters and cases effective by providing an affordable and simple platform for real time reporting and feedback when you want it.
-          </div>
-        </div>
+  </div>
+  <!--ProductSlide -->
+  <div id="features" class="gallery" >
+    <img src="img/MiniCropDetails.jpg" class='image showing' id='img1' data-title="This is image 1" style="max-width: 90%; max-height: 90%;"/>
+    <img src="img/GPS_Details.jpg" class='image hidden' id='img2' data-title="This is image 2" style="max-width: 90%; max-height: 90%;"/>
+    <img src="img/AK15CropDetails.jpg" class='image hidden' id='img3' data-title="This is image 3" style="max-width: 90%; max-height: 90%;"/>
+  </div>
+  <!-- <div id="imgTitle"></div> -->
+  <!-- <ul>
+    <li class="switch active" id="li1" data-image="#img1">1</li>
+    <li class="switch" id="li1" data-image="#img2">2</li>
+    <li class="switch" id="li1" data-image="#img3">3</li>
+  </ul> -->
+  <br/>
+  <div class="container">
+    <div class="row">
+      <div class="col s3 m3 l3">
+        <p class="dark center boldLine">STEP 1
+      </div>
+      <div class="col s3 m3 l3">
+        <p class="dark center boldLine">STEP 2
+      </div>
+      <div class="col s3 m3 l3">
+        <p class="dark center boldLine">STEP 3
+      </div>
+      <div class="col s3 m3 l3" id="signUp">
+        <p class="dark center boldLine">STEP 4
+      </div>
     </div>
+  <br/>
+  <br/>
 
   <!-- Sign Up -->
-  <div class="row section" id="signUp" >
+  <div class="row section"  >
     <div class="col">
       <!-- Modal Trigger -->
-      <button class="waves-effect waves-light btn modal-trigger blue" data-target="modal1">Sign Up and Stay Tuned</button>
-
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal  indigo darken-1">
-          <div class="modal-content">
-              <img src="img/sbl complete_logo.png" alt="logo img" style="max-width: 200px; max-height: 200px;">
-
-            <div class="row">
-              <form class="col s12">
-                <div class="row modal-form-row">
-                  <div class="input-field col s12">
-                    <input id="image_url" type="text" class="validate">
-                    <label for="image_url">First Name</label>
-                  </div>
-                  <div class="input-field col s12">
-                    <input id="image_url" type="text" class="validate">
-                    <label for="image_url">Last Name</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="image_title" type="text" class="validate">
-                    <label for="image_title">Email Address</label>
-                  </div>
-                </div>
-                <!-- <div class="row">
-                  <div class="input-field col s12">
-                    <textarea id="image_description" type="text" class="materialize-textarea validate"></textarea>
-                    <label for="image_description">Description</label>
-                  </div>
-                </div> -->
-              </form>
-            </div>
+      <button class="waves-effect waves-dark btn modal-trigger blue z2" data-target="modal1">Sign Up and Stay Tuned</button>
+      <br/>
+      <div class="container">
+        <div class="row">
+          <div class="col s4 m4 l4 blackSq1">
           </div>
-          <div class="modal-footer">
-            <a class="modal-action modal-close waves-effect waves-green btn-flat" style="color: blue;" >Submit</a>
-            <!-- <button type="submit" form="formId" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</button> -->
+          <div class="z1 fiftyLEFT" style="width:40%; float:left">
+              <img src="img/PhoneLogOn.jpg" alt="app img" style="max-height: 25em">
+          </div>
+          <div class="fiftyRIGHT" style="width:55%; float:right">
+            <p class="dark right">Our cutting edge holsters gives you  unprecedented protection in 144 countries (& counting) around the world.
+            <p class="dark right">We help you Protect the Ones You Love and provide peace of mind at home or on the go.
+            <p class="dark right">Cellular and Wi-Fi  connectivity that will alert your smart phone, smart watch, tablet and/or a PC when your holster has been tampered with.
           </div>
         </div>
-
+      </div>
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal  indigo darken-1">
+        <div class="modal-content">
+          <img src="img/sbl complete_logo.png" alt="logo img" style="max-width: 200px; max-height: 200px;">
+          <div class="row">
+            <form class="col s12">
+              <div class="row modal-form-row">
+                <div class="input-field col s12">
+                  <input id="image_url" type="text" class="validate">
+                  <label for="image_url">First Name</label>
+                </div>
+                <div class="input-field col s12">
+                  <input id="image_url" type="text" class="validate">
+                  <label for="image_url">Last Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="image_title" type="text" class="validate">
+                  <label for="image_title">Email Address</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="modal-action modal-close waves-effect waves-green btn-flat" style="color: blue;" >Submit</a>
+          <!-- <button type="submit" form="formId" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</button> -->
+        </div>
+      </div>
   </div>
+  <div style="height:30.5em"></div>
+  <!-- Download App -->
+  <div class="section scrollspy" id="downLoad">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m12 l12 blackSq2"></div>
+        <div class="z1" style="width:100%">
+            <img src="img/PhoneCrop3.jpg" alt="app img" style="max-height: 30em">
+        </div>
+        <div style="height:3em">
+          <p class="col s8 m10 l10 DLtext">Download Our App
+      </div>
+      <div class="row">
+        <a class="button IOS col s6 m6 l4" href="https://www.apple.com/ios/app-store/" id="downLoad">Apple iOS</a>
+      </div>
+      <div class="row">
+          <a class="button2 Android col s6 m6 l4" href="https://play.google.com/store">Android</a>
+      </div>
 
+    </div>
+  </div>
+  <div style="height:12em"></div>
   <!--Team-->
-  <div class="section scrollspy blackBackground" id="team">
+  <div class="section scrollspy whiteBackground" id="aboutUs">
     <div class="container">
         <h2 class="header text_b"> About Us </h2>
-      <p class="light center">MVP Group is a product research, development, and marketing company with a focus toward integrating wireless technology into commonly used devices, products and applications. We have developed unique patent pending wireless notification intelligence applications which can and have been applied in a variety of products.
-      <p class="light center">SECUREBOXLIVE™ was envisioned with cutting edge storage practices in addition to quick access of your firearm(s) when needed. We provide locking holster cases without the worry of lockout due to technical failure. Premium holster cases include Cellular and Wi-Fi alert capabilities to provide location of the holster case (or your vehicle if the case/unit is in the vehicle) at a minimal cost and give you unprecedented protection in 144 different countries around the world. The bottom line, we help you “Protect the Ones You Love” and “Protect the Things You Love” and provide peace of mind, protection and security at home or on the go.
-      <p class="light center">Our focus is on increasing safety and security by eliminating variables. We believe that our superior technology makes interaction with holsters and cases effective by providing an affordable and simple platform for real time reporting and feedback when you want it.
+      <p class="dark center">MVP Group is a product research, development, and marketing company with a focus toward integrating wireless technology into commonly used devices, products and applications. We have developed unique patent pending wireless notification intelligence applications which can and have been applied in a variety of products.
+      <p class="dark center">SECUREBOXLIVE™ was envisioned with cutting edge storage practices in addition to quick access of your firearm(s) when needed. We provide locking holster cases without the worry of lockout due to technical failure. Premium holster cases include Cellular and Wi-Fi alert capabilities to provide location of the holster case (or your vehicle if the case/unit is in the vehicle) at a minimal cost and give you unprecedented protection in 144 different countries around the world. The bottom line, we help you “Protect the Ones You Love” and “Protect the Things You Love” and provide peace of mind, protection and security at home or on the go.
+      <p class="dark center">Our focus is on increasing safety and security by eliminating variables. We believe that our superior technology makes interaction with holsters and cases effective by providing an affordable and simple platform for real time reporting and feedback when you want it.
     </div>
     <div class="container">
+      <div class="row">
+        <div class="col s12 m12 l12 blackSq3"></div>
       <h2 class="header text_b"> Our Team </h2>
       <div class="row">
         <div class="col s12 m3">
           <div class="card card-avatar">
-            <div class="waves-effect waves-block waves-light">
+            <div class="waves-effect waves-block waves-dark">
               <img class="activator" src="img/avatar1.png">
             </div>
             <div class="card-content">
@@ -338,16 +301,16 @@
                 </small>
               </span>
               <p>
-                <a class="blue-text text-lighten-2" href="https://www.facebook.com">
+                <a class="blue-text text-darken-2" href="https://www.facebook.com">
                   <i class="fa fa-facebook-square"></i>
                 </a>
-                <a class="blue-text text-lighten-2" href="https://twitter.com">
+                <a class="blue-text text-darken-2" href="https://twitter.com">
                   <i class="fa fa-twitter-square"></i>
                 </a>
-                <a class="blue-text text-lighten-2" href="https://plus.google.com">
+                <a class="blue-text text-darken-2" href="https://plus.google.com">
                   <i class="fa fa-google-plus-square"></i>
                 </a>
-                <a class="blue-text text-lighten-2" href="https://www.linkedin.com">
+                <a class="blue-text text-darken-2" href="https://www.linkedin.com">
                   <i class="fa fa-linkedin-square"></i>
                 </a>
               </p>
@@ -356,7 +319,7 @@
         </div>
         <div class="col s12 m3">
           <div class="card card-avatar">
-            <div class="waves-effect waves-block waves-light">
+            <div class="waves-effect waves-block waves-dark">
               <img class="activator" src="img/avatar3.png">
             </div>
             <div class="card-content">
@@ -369,16 +332,16 @@
                 </small>
               </span>
               <p>
-                <a class="blue-text text-lighten-2" href="https://www.facebook.com">
+                <a class="blue-text text-darken-2" href="https://www.facebook.com">
                   <i class="fa fa-facebook-square"></i>
                 </a>
-                <a class="blue-text text-lighten-2" href="https://twitter.com">
+                <a class="blue-text text-darken-2" href="https://twitter.com">
                   <i class="fa fa-twitter-square"></i>
                 </a>
-                <a class="blue-text text-lighten-2" href="https://plus.google.com">
+                <a class="blue-text text-darken-2" href="https://plus.google.com">
                   <i class="fa fa-google-plus-square"></i>
                 </a>
-                <a class="blue-text text-lighten-2" href="https://www.linkedin.com">
+                <a class="blue-text text-darken-2" href="https://www.linkedin.com">
                   <i class="fa fa-linkedin-square"></i>
                 </a>
               </p>
@@ -387,7 +350,7 @@
         </div>
         <div class="col s12 m3">
           <div class="card card-avatar">
-            <div class="waves-effect waves-block waves-light">
+            <div class="waves-effect waves-block waves-dark">
               <img class="activator" src="img/avatar2.png">
             </div>
             <div class="card-content">
@@ -401,16 +364,16 @@
                 </small>
               </span>
               <p>
-                <a class="blue-text text-lighten-2" href="https://www.facebook.com">
+                <a class="blue-text text-darken-2" href="https://www.facebook.com">
                   <i class="fa fa-facebook-square"></i>
                 </a>
-                <a class="blue-text text-lighten-2" href="https://twitter.com">
+                <a class="blue-text text-darken-2" href="https://twitter.com">
                   <i class="fa fa-twitter-square"></i>
                 </a>
-                <a class="blue-text text-lighten-2" href="https://plus.google.com">
+                <a class="blue-text text-darken-2" href="https://plus.google.com">
                   <i class="fa fa-google-plus-square"></i>
                 </a>
-                <a class="blue-text text-lighten-2" href="https://www.linkedin.com">
+                <a class="blue-text text-darken-2" href="https://www.linkedin.com">
                   <i class="fa fa-linkedin-square"></i>
                 </a>
               </p>
@@ -419,7 +382,7 @@
         </div>
         <div class="col s12 m3">
           <div class="card card-avatar">
-            <div class="waves-effect waves-block waves-light">
+            <div class="waves-effect waves-block waves-dark">
               <img class="activator" src="img/avatar4.png">
             </div>
             <div class="card-content">
@@ -432,16 +395,16 @@
                 </small>
               </span>
               <p>
-                <a class="blue-text text-lighten-2" href="https://www.facebook.com">
+                <a class="blue-text text-darken-2" href="https://www.facebook.com">
                   <i class="fa fa-facebook-square"></i>
                 </a>
-                <a class="blue-text text-lighten-2" href="https://twitter.com">
+                <a class="blue-text text-darken-2" href="https://twitter.com">
                   <i class="fa fa-twitter-square"></i>
                 </a>
-                <a class="blue-text text-lighten-2" href="https://plus.google.com">
+                <a class="blue-text text-darken-2" href="https://plus.google.com">
                   <i class="fa fa-google-plus-square"></i>
                 </a>
-                <a class="blue-text text-lighten-2" href="https://www.linkedin.com">
+                <a class="blue-text text-darken-2" href="https://www.linkedin.com">
                   <i class="fa fa-linkedin-square"></i>
                 </a>
               </p>
@@ -453,7 +416,7 @@
   </div>
 
   <!--Footer-->
-  <footer id="contact" class="page-footer scrollspy blackBackground">
+  <footer id="contact" class="page-footer scrollspy blackBackground blackSq3">
     <div class="container">
       <div class="row">
         <!-- <div class="col l10 s12">
@@ -475,7 +438,7 @@
                             <label for="icon_prefix2" class="white-text">Message</label>
                         </div>
                         <div class="col s3">
-                            <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
+                            <button class="btn waves-effect waves-dark red darken-1" type="submit">Submit
                                 <i class="mdi-content-send right white-text"></i>
                             </button>
                         </div>
@@ -523,6 +486,9 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 
+  <script src="http://vjs.zencdn.net/6.6.3/video.js"></script>
+
+
   <!--Materializecss Slider-->
   <script>
     $(document).ready(function () {
@@ -546,25 +512,99 @@
             // complete: function() { alert('Closed'); } // Callback for Modal close
           }
         );
-
         // $('.carousel').carousel();
-
-
-
       //   $('.carousel').carousel({
       //     dist:0,
       //     shift:0,
       //     padding:20,
       // });
-
         $("button").click(function () {
           $("#content").hide();
           $("#yt")[0].src += "?autoplay=1";
           setTimeout(function(){ $("#yt").show(); }, 200);
           });
-
         // $('.modal-trigger').leanModal();
     });
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+// product Slider -->
+// var productIndex = 1;
+// showProductDivs(productIndex);
+
+// function plusProductDivs(n) {
+//   showPoductDivs(productIndex += n);
+// }
+
+// function showProductDivs(n) {
+//   var i;
+//   var x = document.getElementsByClassName("productSlides");
+//   if (n > x.length) {productIndex = 1}
+//   if (n < 1) {productIndex = x.length}
+//   for (i = 0; i < x.length; i++) {
+//      x[i].style.display = "none";
+//   }
+//   x[productIndex-1].style.display = "block";
+// }
+
+// Nav Func -->
+// function myFunction() {
+//     var x = document.getElementById("design");
+//     if (x.style.display === "none") {
+//         x.style.display = "block";
+//     } else {
+//         x.style.display = "none";
+//     }
+// }
+
+// function myFunction2() {
+//     var x = document.getElementById("design2");
+//     if (x.style.display === "none") {
+//         x.style.display = "block";
+//     } else {
+//         x.style.display = "none";
+//     }
+// }
+
+$(function(){
+    $("li.switch").click(function(){
+        var liActive = $("li.active");
+        var imgActive = liActive.data("image");
+        $(imgActive).removeClass("showing").addClass("hidden");
+        $(liActive).removeClass("active");
+
+       //currently clicked li
+       var $this=$(this);
+       $this.addClass("active");
+       var d = $this.data("image");
+       $(d).removeClass("hidden").addClass("showing");
+       $("#imgTitle").text($(d).data("title"));
+    });
+});
+
+// $('audio,video').mediaelementplayer({
+// 			success: function(player, node){
+// 				$('#' + node.id + '-mode').html('mode: ' + player.pluginType);
+// 			},
+// 			startLanguage 'en',
+// 			translationSelector: true
+// 		});
+
   </script>
 
 </html>
