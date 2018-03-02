@@ -114,16 +114,19 @@
         <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
   </div>
   <!--Video Wrapper -->
-   <div class="midContainer">
-      <div class="wrapper">
-        <h2 style="color: white; text-align: center">How it works</h2>
-        <video class='center' max-width="852" max-height="480" controls>
-          <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4">
-          <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg">
-          Your browser does not support the video tag.
-          <track label="English" kind="subtitles" srclang="en" src="bridge-captions.vtt" default>
-        </video>
-      </div>
+  <div class="midContainer">
+    <div class="wrapper">
+      <h2 style="color: white; text-align: center">How it works</h2>
+      <section>
+        <div class="embed-responsive embed-responsive-4by3 col--12 text-center">
+            <video class='responsive vid' max-width="852" max-height="480" controls>
+                <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4">
+                <source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+                <track label="English" kind="subtitles" srclang="en" src="bridge-captions.vtt" default>
+              </video>
+      </section>
+    </div>
   </div>
   <div style="height:10em">
   </div>
@@ -139,7 +142,7 @@
         </div>
         <div class="col s12 m4 l4">
           <div class="center promo promo-example">
-            <i class="mdi-action-explore"></i>
+            <i class="mdi-action-explore responsiveIcon"></i>
             <h5 class="promo-caption">Location</h5>
             <p class="dark center">Knowing where your peace is, is peace of mind. With SOS services you can recieve the exact Google Map location
               right to your phone.</p>
@@ -147,14 +150,14 @@
         </div>
         <div class="col s12 m4 l4">
           <div class="center promo promo-example">
-            <i class="mdi-action-settings-remote"></i>
+            <i class="mdi-action-settings-remote responsiveIcon"></i>
             <h5 class="promo-caption">Instant alerts</h5>
             <p class="dark center">Ability to get notifications if the holster is moved with in-app notifactions straight to your phone.</p>
           </div>
         </div>
         <div class="col s12 m4 l4">
           <div class="center promo promo-example">
-            <i class="mdi-hardware-security"></i>
+            <i class="mdi-hardware-security responsiveIcon"></i>
             <h5 class="promo-caption">Secure technology</h5>
             <p class="dark center">Simple to setup and use, this device is the perfect marriage between protection and elegance.</p>
           </div>
@@ -165,9 +168,9 @@
   <br/>
   <!--design-->
   <div class="section scrollspy whiteBackground">
-    <div class="container">
+    <!-- <div class="container">
       <h2 class="header center">Features </h2>
-    </div>
+    </div> -->
   </div>
   <!--ProductSlide -->
   <div id="features" class="gallery" >
@@ -210,8 +213,8 @@
         <div class="row">
           <div class="col s4 m4 l4 blackSq1">
           </div>
-          <div class="z1 fiftyLEFT" style="width:40%; float:left">
-              <img src="img/PhoneLogOn.jpg" alt="app img" style="max-height: 25em">
+          <div class="z1 fiftyLEFT" style="width:100%; float:left">
+              <img src="img/PhoneLogOn.jpg" alt="app img" class="responsive" style="max-height: 25em">
           </div>
           <div class="fiftyRIGHT" style="width:55%; float:right">
             <p class="dark right">Our cutting edge holsters gives you  unprecedented protection in 144 countries (& counting) around the world.
@@ -258,16 +261,16 @@
       <div class="row">
         <div class="col s12 m12 l12 blackSq2"></div>
         <div class="z1" style="width:100%">
-            <img src="img/PhoneCrop3.jpg" alt="app img" style="max-height: 30em">
+            <img src="img/PhoneCrop3.jpg" alt="app img" class="responsive" style="max-height: 30em">
         </div>
         <div style="height:3em">
           <p class="col s8 m10 l10 DLtext">Download Our App
       </div>
       <div class="row">
-        <a class="button IOS col s6 m6 l4" href="https://www.apple.com/ios/app-store/" id="downLoad">Apple iOS</a>
+        <a class="button IOS col s6 m6 l4" href="https://www.apple.com/ios/app-store/" id="downLoad" target="_blank">Apple iOS</a>
       </div>
       <div class="row">
-          <a class="button2 Android col s6 m6 l4" href="https://play.google.com/store">Android</a>
+          <a class="button2 Android col s6 m6 l4" href="https://play.google.com/store" target="_blank">Android</a>
       </div>
 
     </div>
@@ -283,7 +286,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col s12 m12 l12 blackSq3"></div>
+        <div class="col s12 m12 l12 blackSq4"></div>
       <h2 class="header text_b"> Our Team </h2>
       <div class="row">
         <div class="col s12 m3">
@@ -301,16 +304,16 @@
                 </small>
               </span>
               <p>
-                <a class="blue-text text-darken-2" href="https://www.facebook.com">
+                <a class="blue-text text-darken-2" href="https://www.facebook.com" target="_blank">
                   <i class="fa fa-facebook-square"></i>
                 </a>
-                <a class="blue-text text-darken-2" href="https://twitter.com">
+                <a class="blue-text text-darken-2" href="https://twitter.com" target="_blank">
                   <i class="fa fa-twitter-square"></i>
                 </a>
-                <a class="blue-text text-darken-2" href="https://plus.google.com">
+                <a class="blue-text text-darken-2" href="https://plus.google.com" target="_blank">
                   <i class="fa fa-google-plus-square"></i>
                 </a>
-                <a class="blue-text text-darken-2" href="https://www.linkedin.com">
+                <a class="blue-text text-darken-2" href="https://www.linkedin.com" target="_blank">
                   <i class="fa fa-linkedin-square"></i>
                 </a>
               </p>
@@ -332,16 +335,16 @@
                 </small>
               </span>
               <p>
-                <a class="blue-text text-darken-2" href="https://www.facebook.com">
+                <a class="blue-text text-darken-2" href="https://www.facebook.com" target="_blank">
                   <i class="fa fa-facebook-square"></i>
                 </a>
-                <a class="blue-text text-darken-2" href="https://twitter.com">
+                <a class="blue-text text-darken-2" href="https://twitter.com" target="_blank">
                   <i class="fa fa-twitter-square"></i>
                 </a>
-                <a class="blue-text text-darken-2" href="https://plus.google.com">
+                <a class="blue-text text-darken-2" href="https://plus.google.com" target="_blank">
                   <i class="fa fa-google-plus-square"></i>
                 </a>
-                <a class="blue-text text-darken-2" href="https://www.linkedin.com">
+                <a class="blue-text text-darken-2" href="https://www.linkedin.com" target="_blank">
                   <i class="fa fa-linkedin-square"></i>
                 </a>
               </p>
@@ -364,16 +367,16 @@
                 </small>
               </span>
               <p>
-                <a class="blue-text text-darken-2" href="https://www.facebook.com">
+                <a class="blue-text text-darken-2" href="https://www.facebook.com" target="_blank">
                   <i class="fa fa-facebook-square"></i>
                 </a>
-                <a class="blue-text text-darken-2" href="https://twitter.com">
+                <a class="blue-text text-darken-2" href="https://twitter.com" target="_blank">
                   <i class="fa fa-twitter-square"></i>
                 </a>
-                <a class="blue-text text-darken-2" href="https://plus.google.com">
+                <a class="blue-text text-darken-2" href="https://plus.google.com" target="_blank">
                   <i class="fa fa-google-plus-square"></i>
                 </a>
-                <a class="blue-text text-darken-2" href="https://www.linkedin.com">
+                <a class="blue-text text-darken-2" href="https://www.linkedin.com" target="_blank">
                   <i class="fa fa-linkedin-square"></i>
                 </a>
               </p>
@@ -395,16 +398,16 @@
                 </small>
               </span>
               <p>
-                <a class="blue-text text-darken-2" href="https://www.facebook.com">
+                <a class="blue-text text-darken-2" href="https://www.facebook.com" target="_blank">
                   <i class="fa fa-facebook-square"></i>
                 </a>
-                <a class="blue-text text-darken-2" href="https://twitter.com">
+                <a class="blue-text text-darken-2" href="https://twitter.com" target="_blank">
                   <i class="fa fa-twitter-square"></i>
                 </a>
-                <a class="blue-text text-darken-2" href="https://plus.google.com">
+                <a class="blue-text text-darken-2" href="https://plus.google.com" target="_blank">
                   <i class="fa fa-google-plus-square"></i>
                 </a>
-                <a class="blue-text text-darken-2" href="https://www.linkedin.com">
+                <a class="blue-text text-darken-2" href="https://www.linkedin.com" target="_blank">
                   <i class="fa fa-linkedin-square"></i>
                 </a>
               </p>
@@ -450,12 +453,12 @@
           <h5 class="white-text">Social</h5>
           <ul>
             <li>
-              <a class="white-text" href="https://www.facebook.com">
+              <a class="white-text" href="https://www.facebook.com" target="_blank">
                 <i class="small fa fa-facebook-square white-text"></i> Facebook
               </a>
             </li>
             <li>
-              <a class="white-text" href="https://www.linkedin.com/">
+              <a class="white-text" href="https://www.linkedin.com/" target="_blank">
                 <i class="small fa fa-linkedin-square white-text"></i> Linkedin
               </a>
             </li>
@@ -467,7 +470,7 @@
     <div class="footer-copyright">
       <div class="container" blackBackground>
         Designed by
-        <a class="white-text" href="https://www.linkedin.com/in/dangermin/">Dangermin</a>
+        <a class="white-text" href="https://www.linkedin.com/in/dangermin/" target="_blank">Dangermin</a>
       </div>
     </div>
   </footer>
